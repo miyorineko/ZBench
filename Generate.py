@@ -32,7 +32,7 @@ def traceroute_to_dict(filename):
 			d[int(step)]=dict()
 			d[int(step)]["ip"]=ip
 			if int(step) < 3:
-				d[int(step)]["ip"]="*.*.*.*(已隐藏)"
+				d[int(step)]["ip"]="*.*.*.*(已隱藏)"
 			d[int(step)]["latency"]=latency
 			d[int(step)]["asn"]=asn
 			d[int(step)]["route"]=route
@@ -72,11 +72,11 @@ def dict_to_table(d,tab):
     <div class="{0}" data-tab="{1}">
 <table class="ui very compact striped table">
   <thead>
-    <tr><th>跳数</th>
+    <tr><th>跳數</th>
     <th>IP</th>
     <th>路由</th>
     <th>AS Number</th>
-    <th>延迟</th>
+    <th>延遲</th>
   </tr></thead>
   <tbody>
     """.format(table_class,tab)
@@ -106,7 +106,7 @@ html = """
 <html>
 <head>
     <meta charset="UTF-8" id="home">
-    <meta name="keywords" content="Zbench,Function Club,Bench Mark,VPS,主机博客,测评,测试脚本">
+    <meta name="keywords" content="Zbench,Function Club,Bench Mark,VPS,主機部落格,測評,測試腳本">
     <title>Zbench v1.0 HTML Output</title>
 <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
@@ -117,25 +117,25 @@ html = """
 <div class="ui attached stackable menu">
   <div class="ui container">
     <a class="item" onclick="javascript:scroller('home', 100);">
-      <i class="home icon"></i> 主页
+      <i class="home icon"></i> 首頁
     </a>
     <a class="item" onclick="javascript:scroller('system', 300);">
-      <i class="grid layout icon"></i> 系统信息
+      <i class="grid layout icon"></i> 系統訊息
     </a>
     <a class="item" onclick="javascript:scroller('hdd', 600);">
-      <i class="desktop icon"></i> 硬盘 I/O
+      <i class="desktop icon"></i> 硬碟 I/O
     </a>
 	<a class="item" onclick="javascript:scroller('net', 900);">
-      <i class="sitemap icon"></i> 网络测试
+      <i class="sitemap icon"></i> 網路測試
     </a>
 	<a class="item" onclick="javascript:scroller('route', 1600);">
-      <i class="plug icon"></i> 路由追踪
+      <i class="plug icon"></i> 路由追蹤
     </a>
     <div class="ui simple dropdown item">
       更多
       <i class="dropdown icon"></i>
       <div class="menu">
-        <a class="item" href="https://www.github.com/FunctionClub"><i class="edit icon"></i> 关于我们</a>
+        <a class="item" href="https://www.github.com/FunctionClub"><i class="edit icon"></i> 關於我們</a>
         <a class="item" href="https://github.com/FunctionClub/ZBench/"><i class="github icon"></i>Github </a>
       </div>
     </div>
@@ -152,18 +152,18 @@ html = """
 <div class="ui message red">
 <i class="close icon"></i>
   <div class="header">
-    您正在使用的是开发中的项目。
+    您正在使用的是開發中的項目。
   </div>
-  <p>此程序正处于开发版, 我们无法保证在运行过程中不会出错. 我们将在近期测试后放出正式版，敬请期待.</p>
+  <p>此程序正處於開發版, 我們無法保證在運行過程中不會出錯. 我們將在近期測試後放出正式版，敬請期待.</p>
 </div>
 </div>
 <div class="ui hidden divider"></div>
 <div class="ui container">
 <div class="ui message">
   <div class="header">
-    测试数据准确性说明
+    測試數據準確性說明
   </div>
-  <p>请注意，所有的测试数据为测试时的实时数据. 我们不保证您的服务商会在日后一直使用保持完全相同的服务。数据仅供参考.</p>
+  <p>請注意，所有的測試數據為測試時的即時數據. 我們不保證您的服務商會在日後一直使用保持完全相同的服務。數據僅供參考.</p>
 </p>
 </div>
 </div>
@@ -171,82 +171,82 @@ html = """
 
 <h2 class="ui center aligned icon header">
   <i class="circular Laptop icon"></i>
-  系统信息
+  系統訊息
 </h2>
 <div class="ui hidden divider"></div>
 <div class="ui container">
 <table class="ui celled striped table">
   <thead>
     <tr> 
-      <th>项目</th>
-      <th>数据</th>
+      <th>項目</th>
+      <th>數據</th>
   </tr></thead>
   <tbody>
     <tr>
       <td class="collapsing">
-        <i class="Microchip icon"></i> CPU 型号
+        <i class="Microchip icon"></i> CPU 型號
       </td>
       <td>{0}</td>
     </tr>
     <tr>
       <td>
-        <i class="Microchip icon"></i> CPU 核心数
+        <i class="Microchip icon"></i> CPU 核心數
       </td>
       <td>{1}</td>
       
     </tr>
     <tr>
       <td>
-        <i class="Microchip icon"></i> CPU 主频
+        <i class="Microchip icon"></i> CPU 主頻
       </td>
       <td>{2}</td>
       
     </tr>
     <tr>
       <td>
-        <i class="Archive icon"></i> 硬盘大小
+        <i class="Archive icon"></i> 硬碟大小
       </td>
       <td>{3}</td>
       
     </tr>
     <tr>
       <td>
-        <i class="Lightning icon"></i> 内存大小
+        <i class="Lightning icon"></i> 記憶體大小
       </td>
       <td>{4}</td>
       
     </tr>
 	<tr>
       <td>
-        <i class="Database icon"></i> SWAP 交换空间大小
+        <i class="Database icon"></i> SWAP 交換空間大小
       </td>
       <td>{5}</td>
       
     </tr>
 	<tr>
       <td>
-        <i class="Bar Chart icon"></i> 在线时长
+        <i class="Bar Chart icon"></i> 在線時長
       </td>
       <td>{6}</td>
       
     </tr>
 	<tr>
       <td>
-        <i class="Pie Chart icon"></i> 系统负载
+        <i class="Pie Chart icon"></i> 系統負載
       </td>
       <td>{7}</td>
       
     </tr>
 	<tr>
       <td>
-        <i class="Windows icon"></i> 系统
+        <i class="Windows icon"></i> 系統
       </td>
       <td>{8}</td>
       
     </tr>
 	<tr>
       <td>
-        <i class="Columns icon"></i> 架构
+        <i class="Columns icon"></i> 架構
       </td>
       <td>{9}</td>
       
@@ -260,7 +260,7 @@ html = """
     </tr>
 	<tr>
       <td>
-        <i class="Group Object icon"></i> 虚拟化技术
+        <i class="Group Object icon"></i> 虛擬化技術
       </td>
       <td>{11}</td>
       
@@ -275,32 +275,32 @@ html = """
 
 <h2 class="ui center aligned icon header">
   <i class="circular Clone icon"></i>
-  硬盘 I/O
+  硬碟 I/O
 </h2>
 <div class="ui hidden divider"></div>
 <div class="ui container">
 <table class="ui celled striped table">
   <thead>
     <tr>
-	<th>次数</th>
+	<th>次數</th>
       <th>速度</th>
   </tr></thead>
   <tbody>
     <tr>
       <td class="collapsing">
-        <i class="folder icon"></i> 第一次测试
+        <i class="folder icon"></i> 第一次測試
       </td>
       <td>{12}</td>
     </tr>
     <tr>
       <td>
-        <i class="folder icon"></i> 第二次测试
+        <i class="folder icon"></i> 第二次測試
       </td>
       <td>{13}</td>
     </tr>
     <tr>
       <td>
-        <i class="folder icon"></i> 第三次测试
+        <i class="folder icon"></i> 第三次測試
       </td>
       <td>{14}</td>
     </tr>
@@ -317,17 +317,17 @@ html = """
 <div class="ui hidden divider" id="net"></div>
 <h2 class="ui center aligned icon header">
   <i class="circular Internet Explorer icon"></i>
-  网络测试
+  網路測試
 </h2>
 <div class="ui hidden divider"></div>
 <div class="ui container">
 <table class="ui compact striped table">
   <thead>
     <tr>
-      <th>节点</th>
+      <th>節點</th>
       <th>IP 地址</th>
-      <th>下载速度</th>
-	  <th>延迟</th>
+      <th>下載速度</th>
+	  <th>延遲</th>
     </tr>
   </thead>
   <tbody>
@@ -350,13 +350,13 @@ html = """
 	  <td>{23}</td>
     </tr>
     <tr>
-      <td>Linode 英国</td>
+      <td>Linode 英國</td>
       <td>{24}</td>
       <td>{25}</td>
 	  <td>{26}</td>
     </tr>
     <tr>
-      <td>Linode 法兰克福</td>
+      <td>Linode 法蘭克福</td>
       <td>{27}</td>
       <td>{28}</td>
 	  <td>{29}</td>
@@ -368,19 +368,19 @@ html = """
 	  <td>{32}</td>
     </tr>
     <tr>
-      <td>Softlayer 达拉斯</td>
+      <td>Softlayer 達拉斯</td>
       <td>{33}</td>
       <td>{34}</td>
 	  <td>{35}</td>
     </tr>
     <tr>
-      <td>Softlayer 西雅图</td>
+      <td>Softlayer 西雅圖</td>
       <td>{36}</td>
       <td>{37}</td>
 	  <td>{38}</td>
     </tr>
 	<tr>
-      <td>Softlayer 法兰克福</td>
+      <td>Softlayer 法蘭克福</td>
       <td>{39}</td>
       <td>{40}</td>
 	  <td>{41}</td>
@@ -405,57 +405,57 @@ html = """
 <table class="ui compact striped table">
   <thead>
     <tr>
-      <th>节点</th>
-      <th>上传速度</th>
-      <th>下载速度</th>
-	  <th>延迟</th>
+      <th>節點</th>
+      <th>上傳速度</th>
+      <th>下載速度</th>
+	  <th>延遲</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>上海电信</td>
+      <td>上海電信</td>
       <td>{48}</td>
       <td>{49}</td>
 	  <td>{50}</td>
     </tr>
     <tr>
-      <td>成都电信</td>
+      <td>成都電信</td>
       <td>{51}</td>
       <td>{52}</td>
 	  <td>{53}</td>
     </tr>
     <tr>
-      <td>西安电信</td>
+      <td>西安電信</td>
       <td>{54}</td>
       <td>{55}</td>
 	  <td>{56}</td>
     </tr>
     <tr>
-      <td>上海联通</td>
+      <td>上海聯通</td>
       <td>{57}</td>
       <td>{58}</td>
 	  <td>{59}</td>
     </tr>
     <tr>
-      <td>重庆联通</td>
+      <td>重慶聯通</td>
       <td>{60}</td>
       <td>{61}</td>
 	  <td>{62}</td>
     </tr>
     <tr>
-      <td>西安移动</td>
+      <td>西安移動</td>
       <td>{63}</td>
       <td>{64}</td>
 	  <td>{65}</td>
     </tr>
     <tr>
-      <td>上海移动</td>
+      <td>上海移動</td>
       <td>{66}</td>
       <td>{67}</td>
 	  <td>{68}</td>
     </tr>
     <tr>
-      <td>成都移动</td>
+      <td>成都移動</td>
       <td>{69}</td>
       <td>{70}</td>
 	  <td>{71}</td>
@@ -467,18 +467,18 @@ html = """
 <div class="ui hidden divider" id="route"></div>
 <h2 class="ui center aligned icon header">
   <i class="circular Blind icon"></i>
-  路由追踪
+  路由追蹤
 </h2>
 
 <div class="ui hidden divider"></div>
 <div class="ui container">
 <div class="ui top attached tabular menu">
-  <a class="item active" data-tab="first">上海移动</a>
-  <a class="item" data-tab="second">上海电信</a>
-  <a class="item" data-tab="third">上海联通</a>
-  <a class="item" data-tab="fourth">广东移动</a>
-  <a class="item" data-tab="fifth">广东电信</a>
-  <a class="item" data-tab="sixth">广东联通</a>
+  <a class="item active" data-tab="first">上海移動</a>
+  <a class="item" data-tab="second">上海電信</a>
+  <a class="item" data-tab="third">上海聯通</a>
+  <a class="item" data-tab="fourth">廣東移動</a>
+  <a class="item" data-tab="fifth">廣東電信</a>
+  <a class="item" data-tab="sixth">廣東聯通</a>
 </div>
 
 """
@@ -489,21 +489,21 @@ footer = """
 </div>
 <div class="ui hidden divider"></div>
 <div class="ui visible message">
-  <p>CopyRight 2016-2018 <a href="https://www.github.com/FunctionClub">Function Club</a>. All Right Reserved.   Published By <a href="https://www.zhujiboke.com">主机博客</a></p>
+  <p>CopyRight 2016-2018 <a href="https://www.github.com/FunctionClub">Function Club</a>. All Right Reserved.   Published By <a href="https://www.zhujiboke.com">主機部落格</a></p>
 </div>
 
 </body>
 <footer>
 <script type="text/javascript"> 
-//平滑滚动支持
-// 转换为数字
+//平滑滾動支持
+// 轉換為數字
 function intval(v)
 {
 	v = parseInt(v);
 	return isNaN(v) ? 0 : v;
 }
  
-// 获取元素信息
+// 獲取元素訊息
 function getPos(e)
 {
 	var l = 0;
@@ -522,7 +522,7 @@ function getPos(e)
 	return {x:l, y:t, w:w, h:h, wb:wb, hb:hb};
 }
  
-// 获取滚动条信息
+// 獲取滾動條訊息
 function getScroll() 
 {
 	var t, l, w, h;
@@ -541,7 +541,7 @@ function getScroll()
 	return { t: t, l: l, w: w, h: h };
 }
  
-// 锚点(Anchor)间平滑跳转
+// 錨點(Anchor)間平滑跳轉
 function scroller(el, duration)
 {
 	if(typeof el != 'object') { el = document.getElementById(el); }
@@ -601,7 +601,7 @@ info = change_to_list("/tmp/info.txt")
 
 speed = change_to_list("/tmp/speed.txt")
 
-speed_cn = change_to_list("/tmp/speed_cn.txt")
+speed_tc = change_to_list("/tmp/speed_tc.txt")
 
 shm = traceroute_to_dict("/tmp/shm.txt")
 traceroute_to_table("/tmp/shm.txt")
@@ -634,11 +634,11 @@ speed[0],speed[1],speed[2],speed[3],speed[4],speed[5],speed[6],speed[7],speed[8]
 
 speed[16],speed[17],speed[18],speed[19],speed[20],speed[21],speed[22],speed[23],speed[24],speed[25],speed[26],speed[27],speed[28],speed[29],speed[30],speed[31],speed[32],\
 
-speed_cn[0],speed_cn[1],speed_cn[2],speed_cn[3],speed_cn[4],speed_cn[5],speed_cn[6],speed_cn[7],speed_cn[8],speed_cn[9],speed_cn[10],speed_cn[11],speed_cn[12],\
+speed_tc[0],speed_tc[1],speed_tc[2],speed_tc[3],speed_tc[4],speed_tc[5],speed_tc[6],speed_tc[7],speed_tc[8],speed_tc[9],speed_tc[10],speed_tc[11],speed_tc[12],\
 
-speed_cn[13],speed_cn[14],speed_cn[15],speed_cn[16],speed_cn[17],\
+speed_tc[13],speed_tc[14],speed_tc[15],speed_tc[16],speed_tc[17],\
 
-speed_cn[18],speed_cn[19],speed_cn[20],speed_cn[21],speed_cn[22],speed_cn[23])
+speed_tc[18],speed_tc[19],speed_tc[20],speed_tc[21],speed_tc[22],speed_tc[23])
 
 html = html + shm_html + sht_html + shu_html + gdm_html + gdt_html + gdu_html + footer
 
