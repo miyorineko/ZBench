@@ -6,7 +6,7 @@ A Traditional Chinese translation for ZBench (https://github.com/FunctionClub/ZB
 
 Chinese Ver.:
 
-    wget -N --no-check-certificate https://raw.githubusercontent.com/miyorineko/ZBench/master/ZBench-CN.sh && bash ZBench-CN.sh
+    wget -N --no-check-certificate https://raw.githubusercontent.com/miyorineko/ZBench/master/ZBench-TC.sh && bash ZBench-TC.sh
     
 English Ver.:
 
