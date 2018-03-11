@@ -203,10 +203,10 @@ speed_test_cn(){
             local cerror="ERROR"
         fi
     fi
-    #Record Speed_cn Data
-    echo ${reupload} >> /tmp/speed_cn.txt
-    echo ${REDownload} >> /tmp/speed_cn.txt
-    echo ${relatency} >> /tmp/speed_cn.txt
+    #Record Speed_tc Data
+    echo ${reupload} >> /tmp/speed_tc.txt
+    echo ${REDownload} >> /tmp/speed_tc.txt
+    echo ${relatency} >> /tmp/speed_tc.txt
 }
 speed_cn() {
     speed_test_cn '12637' '襄陽電信'
